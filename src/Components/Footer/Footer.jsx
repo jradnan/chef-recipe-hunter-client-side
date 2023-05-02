@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-[#a82d49] mt-16 text-neutral-content text-center flex justify-center items-center flex-col-reverse">
             <div>
-                <p>© 2021. Foodera. All rights reserved.</p>
+                <p>© 2023. Foodera. All rights reserved.</p>
             </div>
             <div>
                 <div className="grid grid-flow-col gap-4">
