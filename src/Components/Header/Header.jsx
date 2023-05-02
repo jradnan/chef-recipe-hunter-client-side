@@ -8,10 +8,11 @@ const Header = () => {
                 <img src="https://i.ibb.co/gZXLjHq/logo-1.png" alt="" />
             </div>
             <div className="flex-none gap-5 text-[18px] text-[#a82d49] font-[600]">
-                <Link>Home</Link>
+                <Link to={'/'}>Home</Link>
                 <Link>About Us</Link>
                 <Link>Explore Foods</Link>
-                <Link>Blog</Link>
+                <Link to={'/blog'}>Blog</Link>
+                <Link to={'/login'}>Login</Link>
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
