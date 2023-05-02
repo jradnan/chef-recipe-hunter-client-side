@@ -2,13 +2,17 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/Header'
 import Navbar from './Components/Header/Navbar'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
   return (
-    <div className='main-section'>
-      <Navbar></Navbar>
-      <Outlet></Outlet>
+    <div>
+      <div className='main-section'>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
     </div>
   )
 }
