@@ -10,12 +10,14 @@ import Home from './Components/Home/Home.jsx';
 import Blog from './Components/Blog/Blog.jsx';
 import Login from './Components/Login/Login.jsx';
 import ViewRecipee from './Components/ViewRecipee/ViewRecipee.jsx';
+import ErrorPage from './Components/404/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement : <ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
