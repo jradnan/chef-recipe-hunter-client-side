@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 
 const Navbar = () => {
@@ -30,11 +31,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-[18px] text-[#a82d49] font-[600]">
-                    <li><Link to={'/'}>Home</Link></li>
+                    <li><ActiveLink to={'/'}>Home</ActiveLink></li>
                     <li> <Link>About Us</Link></li>
                     <li><Link>Explore Foods</Link></li>
-                    <li><Link to={'/blog'}>Blog</Link></li>
-                    <li><Link to={'/login'}>Login</Link></li>
+                    <li><ActiveLink to={'/blog'}>Blog</ActiveLink></li>
+                    <li><ActiveLink to={'/login'}>Login</ActiveLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
