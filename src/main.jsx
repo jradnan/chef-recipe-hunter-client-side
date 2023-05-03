@@ -14,6 +14,7 @@ import ErrorPage from './Components/404/ErrorPage.jsx';
 import Authprovider from './providers/AuthProvider.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Registration from './Components/Resgistration/Registration.jsx';
+import PrivateRoute from './Components/PrivateRote/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/recipe/:id",
-        element: <ViewRecipee></ViewRecipee>,
+        element: <PrivateRoute><ViewRecipee></ViewRecipee></PrivateRoute>,
         loader : ({params}) => fetch(`https://chef-recipe-hunter-server-side-afridimhrj10-gmailcom.vercel.app/chef/${params.id}`)
       }
     ]

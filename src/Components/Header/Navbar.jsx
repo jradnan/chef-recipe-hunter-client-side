@@ -9,8 +9,17 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     console.log(user);
+    const handleLogOut = () =>{
+        logOut()
+        .then(() => {
+            // Sign-out successful.
+          }).catch((error) => {
+            // An error happened.
+            console.log(error);
+          });
+    }
     return (
         <div className="navbar header bg-base-100 ">
             <div className="navbar-start">
@@ -46,7 +55,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {user &&<FontAwesomeIcon className='mr-10 text-[20px] text-[#a82d49]' icon={faUser} /> }
-                {user?<Link><button className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Logout</button>
+                {user?<Link><button onClick={handleLogOut} className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Logout</button>
                 </Link>:
                 <ActiveLink to={'/login'}><button className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Login</button></ActiveLink>}
             </div>
