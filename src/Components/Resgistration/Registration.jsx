@@ -76,9 +76,7 @@ const Registration = () => {
                     <div className="form-control ">
                         <button className="bg-[#a82d49] my-6  text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Register</button>
                     </div>
-                    <h1 className='text-center'>Or</h1>
-                    <button className="btn btn-outline bg-[#a82d49] text-[white]">Google</button>
-                    <button className="btn btn-outline bg-[#a82d49] text-[white]">Github</button>
+                    
                 </div>
             </form>
         </div>

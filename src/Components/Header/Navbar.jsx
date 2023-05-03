@@ -11,15 +11,17 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
     console.log(user);
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then(() => {
-            // Sign-out successful.
-          }).catch((error) => {
-            // An error happened.
-            console.log(error);
-          });
+            .then(() => {
+                // Sign-out successful.
+            }).catch((error) => {
+                // An error happened.
+                console.log(error);
+            });
     }
+
+   
     return (
         <div className="navbar header bg-base-100 ">
             <div className="navbar-start">
@@ -28,18 +30,11 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact  dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><Link to={'/'}>Home</Link></li>
-                        <li tabIndex={0}>
-                            <a className="justify-between">
-                                Parent
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-                            </a>
-                            <ul className="p-2 ">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><ActiveLink to={'/'}>Home</ActiveLink></li>
+                        <li> <Link>About Us</Link></li>
+                        <li><Link>Explore Foods</Link></li>
+                        <li><ActiveLink to={'/blog'}>Blog</ActiveLink></li>
+                        
                     </ul>
                 </div>
                 <img src="https://i.ibb.co/gZXLjHq/logo-1.png" alt="" />
@@ -50,14 +45,13 @@ const Navbar = () => {
                     <li> <Link>About Us</Link></li>
                     <li><Link>Explore Foods</Link></li>
                     <li><ActiveLink to={'/blog'}>Blog</ActiveLink></li>
-                    <li><ActiveLink to={'/login'}>Login</ActiveLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                {user &&<FontAwesomeIcon className='mr-10 text-[20px] text-[#a82d49]' icon={faUser} /> }
-                {user?<Link><button onClick={handleLogOut} className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Logout</button>
-                </Link>:
-                <ActiveLink to={'/login'}><button className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Login</button></ActiveLink>}
+                {user && <FontAwesomeIcon className='mr-10 text-[20px] text-[#a82d49]' icon={faUser} />}
+                {user ? <Link><button onClick={handleLogOut} className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Logout</button>
+                </Link> :
+                    <ActiveLink to={'/login'}><button className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Login</button></ActiveLink>}
             </div>
         </div>
     );

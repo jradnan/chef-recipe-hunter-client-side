@@ -9,8 +9,8 @@ const ChefData = (props) => {
     const { chef_picture, chef_name, years_of_experience, num_recipes, likes, id } = props.data;
     console.log(likes[0]);
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src={chef_picture} alt="Chef" /></figure>
+        <div className="card card-compact lg:w-96 sm:w-80  bg-base-100 shadow-xl">
+            <figure><img className='' src={chef_picture} alt="Chef" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{chef_name}</h2>
                 <p>Experience: {years_of_experience}</p>
