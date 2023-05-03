@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { AuthContext } from '../../providers/AuthProvider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 const Navbar = () => {
+
+    const { user } = useContext(AuthContext)
+    console.log(user);
     return (
         <div className="navbar header bg-base-100 ">
             <div className="navbar-start">
@@ -39,7 +45,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Get started</a>
+                {user &&<FontAwesomeIcon className='mr-10 text-[20px] text-[#a82d49]' icon={faUser} /> }
+                {user?<Link><button className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Logout</button>
+                </Link>:
+                <ActiveLink to={'/login'}><button className="bg-[#a82d49]   text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">Login</button></ActiveLink>}
             </div>
         </div>
     );

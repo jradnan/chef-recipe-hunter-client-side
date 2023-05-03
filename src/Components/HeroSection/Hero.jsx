@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import {  faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
     return (
         <div className='my-[80px] lg:flex mx-auto w-full'>
             <div className="picture">
-                <img src="https://i.ibb.co/TgmwC5y/1.jpg" alt="" />
+                <img className='rounded-lg' src="https://i.ibb.co/TgmwC5y/1.jpg" alt="" />
             </div>
             <div className="right-content w-96 ml-9 lg:mt-9">
                 <h1 className='text-[32px] text-[#43121d] font-[600]'>We pride ourselves on making real food from the best ingredients.</h1>
