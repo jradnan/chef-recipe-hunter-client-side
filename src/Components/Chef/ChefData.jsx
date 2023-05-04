@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faArrowRight, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
+
 const ChefData = (props) => {
     // console.log(props.data);
+   
 
     const { chef_picture, chef_name, years_of_experience, num_recipes, likes, id } = props.data;
     console.log(likes[0]);
