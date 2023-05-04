@@ -53,3 +53,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider><RouterProvider router={router} /></AuthProvider>
   </React.StrictMode>,
 )
+
+
+// https://chef-recipe-hunter-server-side-afridimhrj10-gmailcom.vercel.app/chef/${params.id}

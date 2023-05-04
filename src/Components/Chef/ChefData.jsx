@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faLocationDot, faArrowCircleRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {  faArrowRight, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const ChefData = (props) => {
@@ -12,10 +12,10 @@ const ChefData = (props) => {
         <div className="card card-compact lg:w-96 sm:w-80  bg-base-100 shadow-xl">
             <figure><img className='' src={chef_picture} alt="Chef" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{chef_name}</h2>
+                <h2 className="card-title text-[#a82d49] font-[600]">{chef_name}</h2>
                 <p>Experience: {years_of_experience}</p>
                 <p>Numbers of recipes: {num_recipes}</p>
-                <p>Likes *4.7</p>
+                <p><FontAwesomeIcon className='text-[#a82d49]' icon={faThumbsUp} />  Likes *4.7</p>
                 <div className="card-actions mt-3">
                     <Link to={`/recipe/${id}`}><button className="bg-[#a82d49] text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">View Recipes <FontAwesomeIcon className='ml-2' icon={faArrowRight} /></button></Link>
                 </div>

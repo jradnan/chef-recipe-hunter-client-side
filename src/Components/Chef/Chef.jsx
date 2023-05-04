@@ -4,6 +4,8 @@ import ChefData from './ChefData';
 const Chef = () => {
     const [chefData, setChefData] = useState([]);
 
+    // https://chef-recipe-hunter-server-side-afridimhrj10-gmailcom.vercel.app/chef
+
     useEffect(()=>{
         fetch('https://chef-recipe-hunter-server-side-afridimhrj10-gmailcom.vercel.app/chef')
         .then(res => res.json())
