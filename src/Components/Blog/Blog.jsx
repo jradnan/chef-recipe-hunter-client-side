@@ -39,7 +39,7 @@ const Blog = () => {
             <p> <span className='text-[#a82d49] text-[13px] font-[500]'>Node.js</span> is a run-time environment created to run JavaScript on the server side.
                 <span className='text-[#a82d49] text-[13px] font-[500]'> Express.js</span> is a framework for Node.js, so in order to use it, you will use Node.js anyway. <br /> <span className='text-[#a82d49] text-[13px] font-[500]'>Express.js</span> will help you organize your application better. It provides many features which will speed up the development for example mechanism for middlewares, more efficient REST support or robust routing.
             </p>
-            <h1 className='text-[#a82d49] text-[20px] font-[500]'>What is a custom hook, and why will you create a custom hook?</h1>
+            <h1 className='text-[#a82d49] text-[20px] font-[500]'>4. What is a custom hook, and why will you create a custom hook?</h1>
             <p>
                 A custom hook is a reusable function that contains some common logic that can be shared between multiple React components. The custom hook is usually created using the built-in React hooks like useState, useEffect, useContext, etc.
 
