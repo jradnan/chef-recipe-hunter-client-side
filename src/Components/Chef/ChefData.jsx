@@ -17,7 +17,7 @@ const ChefData = (props) => {
                 <h2 className="card-title text-[#a82d49] font-[600]">{chef_name}</h2>
                 <p>Experience: {years_of_experience}</p>
                 <p>Numbers of recipes: {num_recipes}</p>
-                <p><FontAwesomeIcon className='text-[#a82d49]' icon={faThumbsUp} />  Likes *4.7</p>
+                <p><FontAwesomeIcon className='text-[#a82d49]' icon={faThumbsUp} />  Likes *4.7k</p>
                 <div className="card-actions mt-3">
                     <Link to={`/recipe/${id}`}><button className="bg-[#a82d49] text-[white] btn-outline text-[18px] py-[11px] px-[28px] font-[600]">View Recipes <FontAwesomeIcon className='ml-2' icon={faArrowRight} /></button></Link>
                 </div>
